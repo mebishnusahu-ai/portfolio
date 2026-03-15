@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import Image from 'next/image';
 
 export default function AboutPage() {
   const containerRef = useRef(null);
@@ -26,7 +27,7 @@ export default function AboutPage() {
       name: 'Deepika Tandulkar',
       role: 'Frontend & UI Engineering',
       description: 'Crafting pixel-perfect, highly interactive user experiences. Specialized in motion design, performance optimization, and building modern, accessible design systems.',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=1200&q=80',
+      image: '/images/deepika.jpeg',
       resume: '/resume-deepika'
     }
   ];
@@ -45,8 +46,13 @@ export default function AboutPage() {
       <div className="flex flex-col gap-60">
         {developers.map((dev, index) => (
           <div key={dev.name} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-20 items-center`}>
-            <div className="reveal-el w-full md:w-1/2 aspect-[4/5] overflow-hidden rounded-2xl bg-[#f5f5f7]">
-              <img src={dev.image} alt={dev.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 hover:scale-100" />
+            <div className="reveal-el w-full md:w-1/2 aspect-[4/5] overflow-hidden rounded-2xl bg-[#f5f5f7] relative">
+              <Image 
+                src={dev.image} 
+                alt={dev.name} 
+                fill
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 hover:scale-100" 
+              />
             </div>
             <div className="reveal-el w-full md:w-1/2 flex flex-col items-start px-4">
               <span className="text-xs uppercase tracking-[0.4em] font-bold text-[#0066cc] mb-6 underline underline-offset-8 decoration-gray-200">The Profile</span>
