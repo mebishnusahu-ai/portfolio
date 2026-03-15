@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   title: {
-    default: "Bishnu & Deepika | Software Solutions & Web Development in Bhilai",
-    template: "%s | Bishnu & Deepika"
+    default: "Expert Software Engineer in Bhilai | Custom Web & AI Solutions",
+    template: "%s | Expert Software Engineer Bhilai"
   },
   description: "Bishnu Prasad Sahu & Deepika Tendulkar provide world-class software solutions, web development, and hotel/restaurant website creation in Bhilai, India. Expert software engineers specializing in AI and modern web technologies.",
   keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://db-pro.online",
-    title: "Bishnu & Deepika | Software Solutions & Web Development in Bhilai",
+    title: "Expert Software Engineer in Bhilai | Custom Web & AI Solutions",
     description: "Expert software engineering and web development services in Bhilai. We specialize in software solutions for hotels, restaurants, and businesses.",
     siteName: "Bishnu & Deepika Portfolio",
     images: [{
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bishnu & Deepika | Software Solutions Bhilai",
+    title: "Expert Software Engineer in Bhilai | Custom Web & AI Solutions",
     description: "Professional software solutions and web development in Bhilai by Bishnu Prasad Sahu & Deepika Tendulkar.",
     images: ["/logo.png"],
   },
