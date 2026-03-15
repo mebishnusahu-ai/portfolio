@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Image from 'next/image';
 import { SparklesCore } from '../ui/sparkles';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -71,10 +72,11 @@ export default function Hero() {
         ref={lineArtRef}
         className="absolute inset-0 z-0 pointer-events-none opacity-0 flex items-center justify-center"
       >
-        <img 
+        <Image 
           src="/images/hero_line_art.png" 
-          alt="Technical Line Art" 
-          className="w-[120%] h-[120%] object-contain opacity-10"
+          alt="Bishnu and Deepika Software Solutions Bhilai - Technical Line Art" 
+          fill
+          className="object-contain opacity-10"
         />
       </div>
 
@@ -106,7 +108,7 @@ export default function Hero() {
 
         <div ref={subtextRef} className="subtext-reveal space-y-6 md:space-y-8">
           <p className="text-lg md:text-2xl lg:text-3xl text-gray-500 font-medium max-w-4xl mx-auto leading-relaxed text-balance px-2">
-            Defining the future of <span className="text-indigo-600">autonomous agents</span> and high-performance infrastructure through elite engineering and cinematic design.
+            Premier <span className="text-indigo-600">software solutions at Bhilai</span>. Defining the future of autonomous agents and high-performance infrastructure through elite engineering and cinematic design.
           </p>
           
           <div className="flex flex-col md:flex-row gap-12 md:gap-24 justify-center items-center pt-8">

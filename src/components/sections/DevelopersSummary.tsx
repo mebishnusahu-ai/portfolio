@@ -62,7 +62,9 @@ export default function DevelopersSummary() {
       <div className="max-w-screen-2xl mx-auto">
         <div className="mb-24 section-title">
           <h2 className="text-[11px] uppercase tracking-[0.4em] font-bold text-[#86868b] mb-4">The Team</h2>
-          <h3 className="text-4xl md:text-6xl font-bold tracking-tight max-w-4xl">Fusing architecture with interface to build the next generation of software.</h3>
+          <h3 className="text-4xl md:text-6xl font-bold tracking-tight max-w-4xl">
+            Providing expert <span className="text-black">software solutions in Bhilai</span>, fusing architecture with interface.
+          </h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-40 relative">

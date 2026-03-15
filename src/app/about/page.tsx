@@ -85,6 +85,24 @@ export default function AboutPage() {
           </div>
         ))}
       </div>
+
+      <div className="mt-40 border-t border-gray-100 pt-20">
+        <h2 className="reveal-el text-4xl md:text-5xl font-bold mb-12">Premier Software Solutions in Bhilai</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="reveal-el">
+            <h3 className="text-xl font-bold mb-4">Software Solutions</h3>
+            <p className="text-[#86868b] leading-relaxed">We provide end-to-end software solutions at Bhilai, catering to startups and established businesses looking for digital transformation.</p>
+          </div>
+          <div className="reveal-el">
+            <h3 className="text-xl font-bold mb-4">Web Development</h3>
+            <p className="text-[#86868b] leading-relaxed">Our web development expertise ensures your business has a premium online presence that converts visitors into customers.</p>
+          </div>
+          <div className="reveal-el">
+            <h3 className="text-xl font-bold mb-4">Hospitality Tech</h3>
+            <p className="text-[#86868b] leading-relaxed">Specialized in hotel website creation and restaurant website creation in Bhilai. We build systems that manage bookings and menus seamlessly.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
