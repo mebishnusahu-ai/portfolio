@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { projects } from '@/lib/projects';
@@ -66,10 +67,11 @@ export default function ProjectGrid() {
            >
              <div className="relative aspect-[16/10] md:aspect-[4/5] overflow-hidden bg-[#f5f5f7] mb-8 rounded-2xl group-hover:shadow-[0_30px_60px_-12px_rgba(0,0,0,0.12)] transition-shadow duration-700">
                <div className="parallax-img absolute inset-0 -top-[15%] w-full h-[130%]">
-                 <img 
+                 <Image 
                    src={project.gallery[0]} 
-                   alt={project.title}
-                   className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 ease-out scale-110 group-hover:scale-100"
+                   alt={`${project.title} - Software development by Bishnu and Deepika Bhilai`}
+                   fill
+                   className="object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 ease-out scale-110 group-hover:scale-100"
                  />
                </div>
                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-700"></div>

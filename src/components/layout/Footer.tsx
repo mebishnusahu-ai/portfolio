@@ -9,14 +9,14 @@ export default function Footer() {
         <div>
           <Image 
             src="/logo.png" 
-            alt="B&D Logo" 
+            alt="Bishnu and Deepika - Software Solutions Bhilai" 
             width={64}
             height={64}
             className="mb-8 opacity-80"
           />
           <h3 className="text-4xl font-bold tracking-tighter mb-4">Let&apos;s build something <br />together.</h3>
           <p className="text-gray-400 max-w-sm">
-            Based in India, working globally. Focused on pushing the boundaries of web and AI.
+            Based in **Bhilai**, working globally. Expert software solutions, web development, and hospitality tech for modern businesses.
           </p>
         </div>
         
