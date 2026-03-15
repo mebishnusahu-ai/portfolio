@@ -21,7 +21,7 @@ export default function AboutPage() {
       name: 'Bishnu Prasad Sahu',
       role: 'Backend & AI Systems',
       description: 'Architecting resilient backend systems and implementing advanced AI solutions. Focused on scalability, performance, and the intersection of data and intelligence.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=1200&q=80',
+      image: '/images/bishnu.png',
       resume: '/resume-bishnu',
       linkedin: 'https://www.linkedin.com/in/mebishnusahu05/'
     },
