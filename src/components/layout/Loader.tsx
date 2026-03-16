@@ -68,7 +68,7 @@ export default function Loader() {
           />
         </div>
         <div ref={textRef} className="flex flex-col items-center gap-2">
-          <span className="text-2xl font-bold tracking-widest text-black">BISHNU & DEEPIKA</span>
+          <span className="text-2xl font-bold tracking-widest text-black">BUILDING THE FUTURE</span>
           <div className="w-48 h-[1px] bg-gray-200 relative overflow-hidden">
             <div className="absolute inset-0 bg-black animate-loading-bar origin-left" />
           </div>

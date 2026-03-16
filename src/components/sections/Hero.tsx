@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Image from 'next/image';
 import { SparklesCore } from '../ui/sparkles';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +32,13 @@ export default function Hero() {
         { scale: 1.1, opacity: 0 },
         { scale: 1, opacity: 0.1, duration: 2, ease: 'power2.out', delay: 0.2 }
       );
+
+      gsap.to('.chakra-rotate', {
+        rotation: 360,
+        duration: 100,
+        repeat: -1,
+        ease: 'none'
+      });
 
       gsap.to('.hero-parallax', {
         y: -60,
@@ -67,17 +73,73 @@ export default function Hero() {
         />
       </div>
 
-      {/* Abstract Line Art Background */}
+      {/* Rotating Chakra Background */}
       <div 
         ref={lineArtRef}
-        className="absolute inset-0 z-0 pointer-events-none opacity-0 flex items-center justify-center"
+        className="absolute inset-0 z-0 pointer-events-none opacity-0 flex items-center justify-center overflow-hidden"
       >
-        <Image 
-          src="/images/hero_line_art.png" 
-          alt="Bishnu and Deepika Software Solutions Bhilai - Technical Line Art" 
-          fill
-          className="object-contain opacity-10"
-        />
+        <div className="chakra-rotate w-[200vw] h-[200vw] md:w-[80vw] md:h-[80vw] flex items-center justify-center">
+          <svg 
+            viewBox="0 0 200 200" 
+            className="w-full h-full text-black"
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Outer elaborate rings */}
+            <circle cx="100" cy="100" r="98" stroke="currentColor" strokeWidth="0.05" strokeDasharray="1 2" />
+            <circle cx="100" cy="100" r="94" stroke="currentColor" strokeWidth="0.2" />
+            <circle cx="100" cy="100" r="92" stroke="currentColor" strokeWidth="0.05" />
+            <circle cx="100" cy="100" r="88" stroke="currentColor" strokeWidth="0.1" strokeDasharray="4 4" />
+            
+            {/* Main spoke ring */}
+            <circle cx="100" cy="100" r="75" stroke="currentColor" strokeWidth="0.4" />
+            
+            {/* Spokes - 24 spokes with triangular heads */}
+            {[...Array(24)].map((_, i) => {
+              const angle = (i * 15 * Math.PI) / 180;
+              const x2 = Number((100 + 75 * Math.cos(angle)).toFixed(3));
+              const y2 = Number((100 + 75 * Math.sin(angle)).toFixed(3));
+              return (
+                <g key={i}>
+                  <line
+                    x1="100"
+                    y1="100"
+                    x2={x2}
+                    y2={y2}
+                    stroke="currentColor"
+                    strokeWidth="0.15"
+                  />
+                  {/* Decorative spoke handle */}
+                  <circle 
+                    cx={Number((100 + 35 * Math.cos(angle)).toFixed(3))} 
+                    cy={Number((100 + 35 * Math.sin(angle)).toFixed(3))} 
+                    r="0.5" 
+                    fill="currentColor" 
+                  />
+                </g>
+              );
+            })}
+            
+            {/* Inner decorative rings */}
+            <circle cx="100" cy="100" r="30" stroke="currentColor" strokeWidth="0.4" />
+            <circle cx="100" cy="100" r="26" stroke="currentColor" strokeWidth="0.1" strokeDasharray="1 1" />
+            <circle cx="100" cy="100" r="12" stroke="currentColor" strokeWidth="0.3" fill="currentColor" fillOpacity="0.03" />
+            
+            {/* Small circles on the outer ring junction */}
+            {[...Array(24)].map((_, i) => (
+              <circle
+                key={`dot-${i}`}
+                cx={Number((100 + 75 * Math.cos((i * 15 * Math.PI) / 180)).toFixed(3))}
+                cy={Number((100 + 75 * Math.sin((i * 15 * Math.PI) / 180)).toFixed(3))}
+                r="0.8"
+                fill="currentColor"
+              />
+            ))}
+
+            {/* Extra Outer Orbitals */}
+            <circle cx="100" cy="100" r="110" stroke="currentColor" strokeWidth="0.05" strokeDasharray="10 20" />
+          </svg>
+        </div>
       </div>
 
       <div className="max-w-7xl w-full text-center z-10 hero-parallax px-4 md:px-0">
