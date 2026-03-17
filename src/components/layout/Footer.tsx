@@ -26,7 +26,7 @@ export default function Footer() {
             <span className="font-semibold text-black uppercase tracking-widest text-xs">Deepika</span>
           </div>
           <p className="text-xs text-gray-400 uppercase tracking-widest">
-            © {currentYear} — Designed & Developed with GSAP + Next.js
+            © {currentYear} — Designed & Developed by Bishnu and Deepika
           </p>
         </div>
       </div>
