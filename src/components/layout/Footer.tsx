@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,8 +21,17 @@ export default function Footer() {
           </p>
         </div>
         
-        <div className="flex flex-col items-start md:items-end">
-          <div className="flex gap-4 mb-4">
+        <div className="flex flex-col items-start md:items-end gap-6 md:gap-4">
+          <div className="flex flex-col md:flex-row gap-4 md:items-center">
+            <Link href="/terms-and-conditions" className="text-sm text-gray-500 hover:text-black transition-colors">
+              Terms & Conditions
+            </Link>
+            <span className="hidden md:block text-gray-300">|</span>
+            <Link href="/cancellation-and-refund" className="text-sm text-gray-500 hover:text-black transition-colors">
+              Cancellation & Refund Policy
+            </Link>
+          </div>
+          <div className="flex gap-4">
             <span className="font-semibold text-black uppercase tracking-widest text-xs">Bishnu</span>
             <span className="font-semibold text-black uppercase tracking-widest text-xs">Deepika</span>
           </div>
